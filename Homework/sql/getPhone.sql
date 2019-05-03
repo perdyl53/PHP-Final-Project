@@ -1,3 +1,3 @@
 SELECT *
 FROM phones
-WHERE type = :type
+WHERE ptype = :type
