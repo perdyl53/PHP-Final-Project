@@ -54,10 +54,8 @@ $sql = file_get_contents('sql/searchPhonesProvided.sql');
 			</p>
 		<?php endforeach; ?>
 		
-		<!-- print currently accessed by the current username -->
 		<p>Currently logged in as: <?php echo $client->getName() ?></p>
 		
-		<!-- A link to the logout.php file -->
 		<p>
 			<a href="logout.php">Log Out</a>
 		</p>
