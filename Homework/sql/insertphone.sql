@@ -1,2 +1,2 @@
-INSERT INTO phones (name, brand, type, price)
-VALUES(:name, :brand, :type, :price)
+INSERT INTO phones (name, brand, ptype, price)
+VALUES(:name, :brand, :ptype, :price)
