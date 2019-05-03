@@ -39,7 +39,6 @@ $phone = $phones[0];
 			<?php echo $phone['brand']; ?><br />
 			<?php echo $phone['price']; ?><br />
 		</p>
-		
 	</div>
 </body>
 </html>
