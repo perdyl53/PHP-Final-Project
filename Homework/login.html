@@ -1,0 +1,39 @@
+<?php
+session_start();
+$errorMsg = "";
+$validUser = $_SESSION["login"] === true;
+if(isset($_POST["sub"])) {
+  $validUser = $_POST["username"] == "admin" && $_POST["password"] == "password";
+  if(!$validUser) $errorMsg = "Invalid username or password.";
+  else $_SESSION["login"] = true;
+}
+if($validUser) {
+   header('location: index.php');
+}
+?>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+  	<title>Login</title>
+	<meta name="description" content="The HTML5 Herald">
+	<meta name="brand" content="SitePoint">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  	<![endif]-->
+</head>
+<body>
+	<div class="page">
+		<h1>Login</h1>
+		<form method="POST">
+			<input type="text" name="username" placeholder="Username" />
+			<input type="password" name="password" placeholder="Password" />
+			<input type="submit" value="Log In" />
+		</form>
+	</div>
+</body>
+</html>
